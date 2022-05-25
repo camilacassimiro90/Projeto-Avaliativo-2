@@ -5,6 +5,7 @@ import { ViewComponent } from './view/view.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormMonthComponent } from './form-month/form-month.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'post/:postId/view', component: ViewComponent },
   { path: 'post/create', component: CreateComponent },
   { path: 'post/:postId/edit', component: EditComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'cadastro-mensal', component: FormMonthComponent },
 ];
 
 @NgModule({

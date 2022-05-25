@@ -10,9 +10,10 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
    
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormMonthComponent } from './form-month/form-month.component';
    
 @NgModule({
-  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, SidebarComponent, DashboardComponent],
+  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, SidebarComponent, DashboardComponent, FormMonthComponent],
   imports: [
     CommonModule,
     PostRoutingModule,
