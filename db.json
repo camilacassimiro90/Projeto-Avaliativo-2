@@ -16,5 +16,27 @@
       "ativo": "",
       "id": 2
     }
+  ],
+  "listDashboard": [
+    {
+      "id": 1,
+      "titulo": "Total unidades",
+      "valor": 80
+    },
+    {
+      "id": 2,
+      "titulo": "Unidades ativas",
+      "valor": 50
+    },
+    {
+      "id": 3,
+      "titulo": "Unidades inativas",
+      "valor": 10
+    },
+    {
+      "id": 4,
+      "titulo": "Média de energia",
+      "valor": 60
+    }
   ]
 }

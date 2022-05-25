@@ -9,9 +9,10 @@ import { EditComponent } from './edit/edit.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
    
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
    
 @NgModule({
-  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, SidebarComponent],
+  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, SidebarComponent, DashboardComponent],
   imports: [
     CommonModule,
     PostRoutingModule,

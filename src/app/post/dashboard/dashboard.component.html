@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav
+      id="sidebarMenu"
+      class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+    >
+      <app-sidebar></app-sidebar>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-start pt-3 pb-3 mb-3 border-bottom"
+      >
+        <h1 class="h2">Dashboard</h1>
+      </div>
+
+      <div class="col p-4 d-flex flex-row">
+        <div *ngFor="let post of listDashboard">
+          <div class="col" style="padding-right: 10px">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ post.titulo }}</h5>
+                <p class="card-text">{{ post.valor }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+    </main>
+  </div>
+</div>

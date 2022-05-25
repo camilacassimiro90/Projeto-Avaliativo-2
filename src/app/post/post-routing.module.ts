@@ -4,6 +4,7 @@ import { IndexComponent } from './index/index.component';
 import { ViewComponent } from './view/view.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'post/index', component: IndexComponent },
   { path: 'post/:postId/view', component: ViewComponent },
   { path: 'post/create', component: CreateComponent },
-  { path: 'post/:postId/edit', component: EditComponent }
+  { path: 'post/:postId/edit', component: EditComponent },
+  { path: 'post/dashboard', component: DashboardComponent }
 ];
 
 @NgModule({
