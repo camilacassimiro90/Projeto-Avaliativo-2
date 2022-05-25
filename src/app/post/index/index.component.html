@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav
+      id="sidebarMenu"
+      class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+    >
+      <app-sidebar></app-sidebar>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+      >
+        <h1 class="h2">Unidades</h1>
+      </div>
+      <h3>Lista de unidades</h3>
+    
+        <div class="container" class="containerTabela">
+          <table class="table" class="table table-light">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Apelido</th>
+                <th scope="col">Local</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <td></td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let post of posts">
+                <td>{{ post.id }}</td>
+                <td>{{ post.apelido }}</td>
+                <td>{{ post.local }}</td>
+                <td>{{ post.marca }}</td>
+                <td>{{ post.modelo }}</td>
+                <td>
+                  <button
+                    class="btn btn-primary"
+                    href="#"
+                    [routerLink]="['/post/', post.id, 'edit']"
+                  >
+                    Editar
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-danger" (click)="deletePost(post.id)">
+                    Remover
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="float-end">
+            <a href="#" routerLink="/post/create/" class="btn btn-success"
+              >Nova Unidade</a
+            >
+          </div>
+        </div>
+        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+    </main>
+  </div>
+</div>

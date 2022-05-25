@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "apelido": "",
+      "local": "b",
+      "marca": "",
+      "modelo": "",
+      "ativo": "",
+      "id": 1
+    },
+    {
+      "apelido": "a",
+      "local": "",
+      "marca": "",
+      "modelo": "",
+      "ativo": "",
+      "id": 2
+    }
+  ]
+}

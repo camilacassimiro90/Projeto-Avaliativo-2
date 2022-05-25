@@ -1,0 +1,76 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <nav
+        id="sidebarMenu"
+        class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+      >
+        <app-sidebar></app-sidebar>
+      </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Unidades</h1>
+            </div>
+
+            <h3>Cadastro de Unidade Geradora</h3>
+            
+              <form [formGroup]="form" (ngSubmit)="submit()">
+              <div class="form-group">
+                  <label for="apelido">Apelido</label>
+                  <input
+                      formControlName="apelido"
+                      id="apelido"
+                      type="text"
+                      class="form-control">
+                  <div *ngIf="f['apelido'].touched && f['apelido'].invalid" class="alert alert-danger">
+                      <div *ngIf="f['apelido'].errors && f['apelido'].errors['required']">Campo precisa ser preenchido.</div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="local">Local</label>
+                  <textarea
+                      formControlName="local"
+                      id="local"
+                      type="text"
+                      class="form-control">
+                  </textarea>
+                  <div *ngIf="f['local'].touched && f['local'].invalid" class="alert alert-danger">
+                      <div *ngIf="f['local'].errors && f['local'].errors['required']">Campo precisa ser preenchido.</div>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="marca">Marca</label>
+                <textarea
+                    formControlName="marca"
+                    id="marca"
+                    type="text"
+                    class="form-control">
+                </textarea>
+                <div *ngIf="f['marca'].touched && f['marca'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['marca'].errors && f['marca'].errors['required']">Campo precisa ser preenchido.</div>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <textarea
+                    formControlName="modelo"
+                    id="modelo"
+                    type="text"
+                    class="form-control">
+                </textarea>
+                <div *ngIf="f['modelo'].touched && f['modelo'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['modelo'].errors && f['modelo'].errors['required']">Campo precisa ser preenchido.</div>
+                </div>
+            </div>
+            <div class="form-check">
+                <input name="logged" type="checkbox" />
+                <label class="form-check-label">Ativo</label>
+              </div>
+              <button class="btn btn-primary" type="submit" >Salvar</button>
+              </form>
+        </main>
+    </div>
+</div>
+
+<!-- [disabled]="!form.valid" -->
