@@ -1,0 +1,59 @@
+<div class="container">
+  <body class="body-signin" class="text-center">
+    <main class="form-signin">
+      <img src="assets/catavento.png" class="img-signin" alt="" />
+      <form #login="ngForm" (ngSubmit)="sendUser()">
+        <img
+          class="mb-10"
+          src="../assets/logo.png"
+          alt=""
+          width="200"
+          height="200"
+        />
+        <h1 class="h3 mb-3 fw-normal">Seja bem vindo</h1>
+
+        <div class="container">
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              name="email"
+              (keyup)="validateEmail()"
+              [(ngModel)]="user.email"
+              required
+            />
+            <small *ngIf="notEmail" class="form-text text-danger"
+              >Email fora do formato esperado</small
+            >
+          </div>
+          <div class="form-group">
+            <input
+              #senha="ngModel"
+              type="password"
+              class="form-control"
+              placeholder="Senha"
+              name="password"
+              [ngClass]="{
+                'border-danger': user.password.length < 6 || senha.pristine
+              }"
+              [(ngModel)]="user.password"
+              required
+            />
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              (click)="user.logged = !user.logged"
+              routerLink="/dashboard"
+              [disabled]="!login.valid"
+            >
+              Entrar
+            </button>
+            <p class="mt-5 mb-3 text-muted">&copy; DEVinHouse 2022</p>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</div>

@@ -1,0 +1,42 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  }
+  
+  .container {
+    background: #FAFAFA;
+  
+  }
+  .body-signin {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background: #FAFAFA;
+  }
+  .img-signin {
+    position: absolute;
+     width: 1135,89px;
+    width: 1200px;
+    height: 1000px;
+    left: -157px;
+    top: 0px;
+  }
+  form {
+    position: absolute;
+    width: 518px;
+    height: 708px;
+    left: 1208px;
+    top:132px;
+    background: #fafafa;
+  }
+  @media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+  font-size: 3.5rem;
+    }
+  }
+    
+  
+  
