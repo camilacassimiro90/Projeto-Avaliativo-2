@@ -15,6 +15,7 @@ export class EditComponent implements OnInit {
   id!: number;
   post!: Post;
   form!: FormGroup;
+  disabled: boolean = false;
 
   constructor(
     public postService: PostService,
@@ -37,7 +38,7 @@ export class EditComponent implements OnInit {
     });
   }
 
-  get f() {
+  get validateFields() {
     return this.form.controls;
   }
 

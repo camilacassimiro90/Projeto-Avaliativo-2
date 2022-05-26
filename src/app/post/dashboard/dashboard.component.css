@@ -5,6 +5,22 @@
   background: #FAFAFA;
 }
 
+.h2 {
+
+width: 207px;
+height: 108px;
+left: 385px;
+top: 33px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 54px;
+
+color: #374557;
+}
+
 .card {
   box-sizing: border-box;
   left: 0px;
@@ -14,4 +30,32 @@
   background: #FFFFFF;
   border: 1px solid #DFE0EB;
   border-radius: 8px;
+}
+
+.card-title {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #9FA2B4;
+}
+
+.card-text {
+  height: 50px;
+  left: 32px;
+  right: 896px;
+  top: 60px;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+
+  color: #252733;
 }

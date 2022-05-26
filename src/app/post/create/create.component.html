@@ -14,16 +14,18 @@
 
             <h3>Cadastro de Unidade Geradora</h3>
             
-              <form [formGroup]="form" (ngSubmit)="submit()">
+              <form [formGroup]="form" (ngSubmit)="submit()" >
               <div class="form-group">
                   <label for="apelido">Apelido</label>
                   <input
                       formControlName="apelido"
                       id="apelido"
                       type="text"
-                      class="form-control">
-                  <div *ngIf="f['apelido'].touched && f['apelido'].invalid" class="alert alert-danger">
-                      <div *ngIf="f['apelido'].errors && f['apelido'].errors['required']">Campo precisa ser preenchido.</div>
+                      class="form-control"
+                      
+                      >
+                  <div *ngIf="validateFields['apelido'].touched && validateFields['apelido'].invalid" class="alert alert-danger">
+                      <div *ngIf="validateFields['apelido'].errors && validateFields['apelido'].errors['required']">Campo precisa ser preenchido.</div>
                   </div>
               </div>
               <div class="form-group">
@@ -32,10 +34,12 @@
                       formControlName="local"
                       id="local"
                       type="text"
-                      class="form-control">
+                      class="form-control"
+                      
+                      >
                   </textarea>
-                  <div *ngIf="f['local'].touched && f['local'].invalid" class="alert alert-danger">
-                      <div *ngIf="f['local'].errors && f['local'].errors['required']">Campo precisa ser preenchido.</div>
+                  <div *ngIf="validateFields['local'].touched && validateFields['local'].invalid" class="alert alert-danger">
+                      <div *ngIf="validateFields['local'].errors && validateFields['local'].errors['required']">Campo precisa ser preenchido.</div>
                   </div>
               </div>
               <div class="form-group">
@@ -44,10 +48,11 @@
                     formControlName="marca"
                     id="marca"
                     type="text"
-                    class="form-control">
+                    class="form-control"
+                    >
                 </textarea>
-                <div *ngIf="f['marca'].touched && f['marca'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['marca'].errors && f['marca'].errors['required']">Campo precisa ser preenchido.</div>
+                <div *ngIf="validateFields['marca'].touched && validateFields['marca'].invalid" class="alert alert-danger">
+                    <div *ngIf="validateFields['marca'].errors && validateFields['marca'].errors['required']">Campo precisa ser preenchido.</div>
                 </div>
                 
             </div>
@@ -57,20 +62,20 @@
                     formControlName="modelo"
                     id="modelo"
                     type="text"
-                    class="form-control">
+                    class="form-control"
+                    >
                 </textarea>
-                <div *ngIf="f['modelo'].touched && f['modelo'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['modelo'].errors && f['modelo'].errors['required']">Campo precisa ser preenchido.</div>
+                <div *ngIf="validateFields['modelo'].touched && validateFields['modelo'].invalid" class="alert alert-danger">
+                    <div *ngIf="validateFields['modelo'].errors && validateFields['modelo'].errors['required']">Campo precisa ser preenchido.</div>
                 </div>
             </div>
             <div class="form-check">
                 <input name="logged" type="checkbox" />
                 <label class="form-check-label">Ativo</label>
               </div>
-              <button class="btn btn-primary" type="submit" >Salvar</button>
+              <button class="btn btn-primary" type="submit" [disabled]="form.controls['modelo'].invalid">Salvar</button>
               </form>
         </main>
     </div>
 </div>
 
-<!-- [disabled]="!form.valid" -->

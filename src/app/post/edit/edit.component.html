@@ -25,10 +25,10 @@
             class="form-control"
           />
           <div
-            *ngIf="f['apelido'].touched && f['apelido'].invalid"
+            *ngIf="validateFields['apelido'].touched && validateFields['apelido'].invalid"
             class="alert alert-danger"
           >
-            <div *ngIf="f['apelido'].errors && f['apelido'].errors['required']">
+            <div *ngIf="validateFields['apelido'].errors && validateFields['apelido'].errors['required']">
               Campo precisa ser preenchido.
             </div>
           </div>
@@ -43,10 +43,10 @@
           >
           </textarea>
           <div
-            *ngIf="f['local'].touched && f['local'].invalid"
+            *ngIf="validateFields['local'].touched && validateFields['local'].invalid"
             class="alert alert-danger"
           >
-            <div *ngIf="f['local'].errors && f['local'].errors['required']">
+            <div *ngIf="validateFields['local'].errors && validateFields['local'].errors['required']">
               Campo precisa ser preenchido.
             </div>
           </div>
@@ -61,10 +61,10 @@
           >
           </textarea>
           <div
-            *ngIf="f['marca'].touched && f['marca'].invalid"
+            *ngIf="validateFields['marca'].touched && validateFields['marca'].invalid"
             class="alert alert-danger"
           >
-            <div *ngIf="f['marca'].errors && f['marca'].errors['required']">
+            <div *ngIf="validateFields['marca'].errors && validateFields['marca'].errors['required']">
               Campo precisa ser preenchido.
             </div>
           </div>
@@ -79,10 +79,10 @@
           >
           </textarea>
           <div
-            *ngIf="f['modelo'].touched && f['modelo'].invalid"
+            *ngIf="validateFields['modelo'].touched && validateFields['modelo'].invalid"
             class="alert alert-danger"
           >
-            <div *ngIf="f['modelo'].errors && f['modelo'].errors['required']">
+            <div *ngIf="validateFields['modelo'].errors && validateFields['modelo'].errors['required']">
               Campo precisa ser preenchido.
             </div>
           </div>
@@ -91,7 +91,7 @@
           <input name="logged" type="checkbox" />
           <label class="form-check-label">Ativo</label>
         </div>
-        <button class="btn btn-primary" type="submit">Salvar</button>
+        <button class="btn btn-primary" type="submit" [disabled]="form.controls['modelo' || 'local' || 'marca' || 'apelido'].invalid">Salvar</button>
       </form>
     </main>
   </div>
