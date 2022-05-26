@@ -4,24 +4,24 @@
       "apelido": "a",
       "local": "",
       "marca": "",
-      "modelo": "a",
-      "ativo": false,
+      "modelo": "true",
+      "ativo": true,
       "id": 1
     },
     {
-      "apelido": "a",
-      "local": "s",
-      "marca": "d",
-      "modelo": "f",
-      "ativo": true,
+      "apelido": "b",
+      "local": "",
+      "marca": "",
+      "modelo": "false",
+      "ativo": false,
       "id": 2
     },
     {
-      "apelido": "teste",
+      "apelido": "c",
       "local": "",
       "marca": "",
-      "modelo": "fff",
-      "ativo": false,
+      "modelo": "true",
+      "ativo": true,
       "id": 3
     }
   ],
