@@ -27,13 +27,6 @@ export class PostDashboardService {
          )
   }
 
-  // getAll(): Observable<PostDashboard[]> {
-  //   return this.httpClient.get<PostDashboard[]>(this.apiURL + '/posts/dashboard')
-  //   .pipe(
-  //     catchError(this.errorHandler)
-  //   )
-  // }
-
   errorHandler(error:any) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {
