@@ -34,7 +34,7 @@ export class EditComponent implements OnInit {
       local: new FormControl('', [Validators.required]),
       marca: new FormControl('', Validators.required),
       modelo: new FormControl('', [Validators.required]),
-      ativo: new FormControl('', Validators.required),
+      ativo: new FormControl(true),
     });
   }
 
