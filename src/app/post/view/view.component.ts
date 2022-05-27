@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { ListaService } from '../post.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Lista } from '../post';
 
@@ -13,7 +13,7 @@ export class ViewComponent implements OnInit {
   post!: Lista;
 
   constructor(
-    public postService: PostService,
+    public postService: ListaService,
     private route: ActivatedRoute,
     private router: Router
   ) { }

@@ -28,7 +28,7 @@ export class PostDashboardService {
   // }
 
   getAll(): Observable<Lista[]> {
-    return this.httpClient.get<Lista[]>(this.apiURL + '/posts/')
+    return this.httpClient.get<Lista[]>(this.apiURL + '/listas/')
     .pipe(
       catchError(this.errorHandler)
     )

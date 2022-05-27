@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { ListaService } from '../post.service';
 import { Lista } from '../post';
 
 @Component({
@@ -10,7 +10,7 @@ import { Lista } from '../post';
 export class IndexComponent implements OnInit {
   posts: Lista[] = [];
 
-  constructor(public postService: PostService) { }
+  constructor(public postService: ListaService) { }
 
   ngOnInit(): void {
     this.postService.pegarDados().subscribe((data: Lista[]) => {

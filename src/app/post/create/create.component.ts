@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { ListaService } from '../post.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
@@ -14,7 +14,7 @@ export class CreateComponent implements OnInit {
   form!: FormGroup;
   disabled: boolean = false;
 
-  constructor(public postService: PostService,
+  constructor(public postService: ListaService,
     private router: Router) { }
 
   ngOnInit(): void {

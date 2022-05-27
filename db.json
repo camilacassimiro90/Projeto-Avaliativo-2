@@ -1,26 +1,10 @@
 {
   "posts": [
     {
-      "apelido": "n",
-      "local": "",
-      "marca": "",
-      "modelo": "true",
-      "ativo": true,
-      "id": 3
-    },
-    {
       "apelido": "",
       "local": "",
       "marca": "",
-      "modelo": "sa",
-      "ativo": false,
-      "id": 4
-    },
-    {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "d",
+      "modelo": "f",
       "ativo": false,
       "id": 5
     },
@@ -28,31 +12,33 @@
       "apelido": "",
       "local": "",
       "marca": "",
-      "modelo": "g",
+      "modelo": "l",
       "ativo": false,
-      "id": 6
-    }
-  ],
-  "listDashboard": [
-    {
-      "id": 1,
-      "titulo": "Total unidades",
-      "valor": 80
+      "id": 7
     },
     {
-      "id": 2,
-      "titulo": "Unidades ativas",
-      "valor": 50
+      "apelido": "",
+      "local": "",
+      "marca": "",
+      "modelo": "j",
+      "ativo": false,
+      "id": 8
     },
     {
-      "id": 3,
-      "titulo": "Unidades inativas",
-      "valor": 10
+      "apelido": "",
+      "local": "",
+      "marca": "",
+      "modelo": "j",
+      "ativo": false,
+      "id": 9
     },
     {
-      "id": 4,
-      "titulo": "Média de energia",
-      "valor": 60
+      "apelido": "",
+      "local": "",
+      "marca": "",
+      "modelo": "ç",
+      "ativo": false,
+      "id": 10
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { ListaService } from '../post.service';
 import { Lista } from '../post';
 
 @Component({
@@ -8,16 +8,16 @@ import { Lista } from '../post';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  posts: Lista[] = [];
+  listas: Lista[] = [];
 
   unidadeAtivo?: number;
 
-  constructor(public postService: PostService) { }
+  constructor(public postService: ListaService) { }
 
   ngOnInit(): void {
     this.postService.pegarDados().subscribe((data: Lista[]) => {
-      this.posts = data;
-      console.log(this.posts);
+      this.listas = data;
+      console.log(this.listas);
     })
   }
 

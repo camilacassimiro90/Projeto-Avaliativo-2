@@ -9,7 +9,7 @@ import { Lista } from './post';
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class ListaService {
   private API = "http://localhost:3000";
     
   httpOptions = {
