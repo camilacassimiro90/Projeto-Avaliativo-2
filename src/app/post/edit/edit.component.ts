@@ -3,7 +3,7 @@ import { PostService } from '../post.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../post';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
+
 
 @Component({
   selector: 'app-edit',
@@ -34,7 +34,7 @@ export class EditComponent implements OnInit {
       local: new FormControl('', [Validators.required]),
       marca: new FormControl('', Validators.required),
       modelo: new FormControl('', [Validators.required]),
-      ativo: new FormControl(true),
+      ativo: new FormControl(false),
     });
   }
 

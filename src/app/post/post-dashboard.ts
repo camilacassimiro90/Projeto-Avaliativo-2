@@ -1,5 +1,8 @@
 export interface PostDashboard {
   id: number;
   titulo: string;
-  valor:number;
+  totalUnidades:number;
+  unidadesAtivas:number;
+  unidadesInativas:number;
+  mediaEnergia:number;
 }

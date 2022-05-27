@@ -10,13 +10,20 @@ import { PostDashboard } from '../post-dashboard';
 export class DashboardComponent implements OnInit {
   listDashboard: PostDashboard[] = [];
 
+  unidadeAtivo?: number;
+
   constructor(public PostDashboardService: PostDashboardService) { }
 
   ngOnInit(): void {
     this.PostDashboardService.listDashboard().subscribe((data: PostDashboard[]) => {
       this.listDashboard = data;
-
     })
   }
+  // getAtivos(){
+  //   this.unidadeAtivo?for (let i = 0; i < this.unidadeAtivo.length; i++) {
+  //     const element = this.unidadeAtivo[i];
+      
+  //   }
+  // }
 
 }
