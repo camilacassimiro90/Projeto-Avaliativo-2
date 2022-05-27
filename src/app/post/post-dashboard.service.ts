@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
    
-import { Post } from './post';
+import { Lista } from './post';
 import { PostDashboard } from './post-dashboard';
 
 @Injectable({
@@ -20,11 +20,18 @@ export class PostDashboardService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listDashboard () {
-    return this.httpClient.get<PostDashboard[]>(this.apiURL)
+  // listDashboard () {
+  //   return this.httpClient.get<PostDashboard[]>(this.apiURL)
+  //   .pipe(
+  //          catchError(this.errorHandler)
+  //        )
+  // }
+
+  getAll(): Observable<Lista[]> {
+    return this.httpClient.get<Lista[]>(this.apiURL + '/posts/')
     .pipe(
-           catchError(this.errorHandler)
-         )
+      catchError(this.errorHandler)
+    )
   }
 
   errorHandler(error:any) {

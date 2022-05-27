@@ -34,7 +34,7 @@ export class CreateComponent implements OnInit {
 
   submit() {
     console.log(this.form.value);
-    this.postService.create(this.form.value).subscribe((res: any) => {
+    this.postService.enviarDados(this.form.value).subscribe((res: any) => {
       console.log('Dados enviado!');
       this.router.navigateByUrl('post/index');
     })

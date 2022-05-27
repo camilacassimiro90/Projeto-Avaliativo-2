@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from '../post';
+import { Lista } from '../post';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
@@ -13,7 +13,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class EditComponent implements OnInit {
 
   id!: number;
-  post!: Post;
+  post!: Lista;
   form!: FormGroup;
   disabled: boolean = false;
 
@@ -25,7 +25,7 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['postId'];
-    this.postService.find(this.id).subscribe((data: Post) => {
+    this.postService.pegarId(this.id).subscribe((data: Lista) => {
       this.post = data;
     });
 
@@ -44,7 +44,7 @@ export class EditComponent implements OnInit {
 
   submit() {
     console.log(this.form.value);
-    this.postService.update(this.id, this.form.value).subscribe((res: any) => {
+    this.postService.atualizar(this.id, this.form.value).subscribe((res: any) => {
       console.log('Tabela atualizada com sucesso!');
       this.router.navigateByUrl('post/index');
     })

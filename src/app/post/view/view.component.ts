@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from '../post';
+import { Lista } from '../post';
 
 @Component({
   selector: 'app-view',
@@ -10,7 +10,7 @@ import { Post } from '../post';
 })
 export class ViewComponent implements OnInit {
   id!: number;
-  post!: Post;
+  post!: Lista;
 
   constructor(
     public postService: PostService,
@@ -21,7 +21,7 @@ export class ViewComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['postId'];
 
-    this.postService.find(this.id).subscribe((data: Post) => {
+    this.postService.pegarId(this.id).subscribe((data: Lista) => {
       this.post = data;
     });
   }

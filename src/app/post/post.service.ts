@@ -4,13 +4,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
    
-import { Post } from './post';
+import { Lista } from './post';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  private apiURL = "http://localhost:3000";
+  private API = "http://localhost:3000";
     
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,36 +20,36 @@ export class PostService {
    
   constructor(private httpClient: HttpClient) { }
     
-  getAll(): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(this.apiURL + '/posts/')
+  pegarDados(): Observable<Lista[]> {
+    return this.httpClient.get<Lista[]>(this.API + '/posts/')
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
-  create(post:any): Observable<Post> {
-    return this.httpClient.post<Post>(this.apiURL + '/posts/', JSON.stringify(post), this.httpOptions)
+  enviarDados(post:any): Observable<Lista> {
+    return this.httpClient.post<Lista>(this.API + '/posts/', JSON.stringify(post), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }  
     
-  find(id:number): Observable<Post> {
-    return this.httpClient.get<Post>(this.apiURL + '/posts/' + id)
+  pegarId(id:number): Observable<Lista> {
+    return this.httpClient.get<Lista>(this.API + '/posts/' + id)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
-  update(id:number, post:any): Observable<Post> {
-    return this.httpClient.put<Post>(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
+  atualizar(id:number, post:any): Observable<Lista> {
+    return this.httpClient.put<Lista>(this.API + '/posts/' + id, JSON.stringify(post), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
-  delete(id:number){
-    return this.httpClient.delete<Post>(this.apiURL + '/posts/' + id, this.httpOptions)
+  excluir(id:number){
+    return this.httpClient.delete<Lista>(this.API + '/posts/' + id, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

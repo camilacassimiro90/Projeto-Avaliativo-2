@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PostDashboardService } from '../post-dashboard.service';
-import { PostDashboard } from '../post-dashboard';
+import { PostService } from '../post.service';
+import { Lista } from '../post';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,19 +8,21 @@ import { PostDashboard } from '../post-dashboard';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  listDashboard: PostDashboard[] = [];
+  posts: Lista[] = [];
 
   unidadeAtivo?: number;
 
-  constructor(public PostDashboardService: PostDashboardService) { }
+  constructor(public postService: PostService) { }
 
   ngOnInit(): void {
-    this.PostDashboardService.listDashboard().subscribe((data: PostDashboard[]) => {
-      this.listDashboard = data;
+    this.postService.pegarDados().subscribe((data: Lista[]) => {
+      this.posts = data;
+      console.log(this.posts);
     })
   }
+
   // getAtivos(){
-  //   this.unidadeAtivo?for (let i = 0; i < this.unidadeAtivo.length; i++) {
+  //   this.unidadeAtivo? = for (let i = 0; i < this.unidadeAtivo.length; i++) {
   //     const element = this.unidadeAtivo[i];
       
   //   }

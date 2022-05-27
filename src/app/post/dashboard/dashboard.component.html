@@ -14,13 +14,37 @@
         <h1 class="h2">Dashboard</h1>
       </div>
 
-      <div class="col p-4 d-flex flex-row">
-        <div *ngFor="let post of listDashboard">
-          <div class="col" style="padding-right: 10px">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">{{ post.titulo }}</h5>
-                <p class="card-text">{{ post.totalUnidades }}</p>
+      <div class="cards">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="card card-block">
+              <div class="card-block">
+                <h4 class="card-title">Total Unidades</h4>
+                <p class="card-text">acessar interface / get all / length</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card card-block">
+              <div class="card-block">
+                <h4 class="card-title">Unidades ativas</h4>
+                <p class="card-text">16</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card card-block">
+              <div class="card-block">
+                <h4 class="card-title">Unidades inativas</h4>
+                <p class="card-text">43</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card card-block">
+              <div class="card-block">
+                <h4 class="card-title">Média de energia</h4>
+                <p class="card-text">64 Kw</p>
               </div>
             </div>
           </div>
