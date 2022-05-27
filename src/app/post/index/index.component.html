@@ -36,7 +36,8 @@
                 <td>{{ post.modelo }}</td>
                 <td>
                   <button
-                    class="btn btn-primary"
+                    class="btn btn"
+                    class="button-edit"
                     href="#"
                     [routerLink]="['/post/', post.id, 'edit']"
                   >
@@ -44,7 +45,7 @@
                   </button>
                 </td>
                 <td>
-                  <button class="btn btn-danger" (click)="deletePost(post.id)">
+                  <button class="btn btn" class="button-delete" (click)="deletePost(post.id)">
                     Remover
                   </button>
                 </td>
@@ -52,7 +53,7 @@
             </tbody>
           </table>
           <div class="float-end">
-            <a href="#" routerLink="/post/create/" class="btn btn-success"
+            <a href="#" routerLink="/post/create/" class="btn btn-success" class="button-add"
               >Nova Unidade</a
             >
           </div>

@@ -12,26 +12,20 @@
   align-items: center;
   padding: 16px 24px;
   gap: 24px;
-
   width: 252px;
   height: 64px;
-
   text-decoration: none;
-
-  /* background: #4CBC9A;
-  
-  box-shadow: 0px 20px 50px rgba(55, 69, 87, 0.1);
-  border-radius: 20px;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  
-  color: #FFFFFF; */
+  color: #A098AE;
+}
+
+.linkAtivo {
+  background: #4CBC9A;
+  color: white;
+  box-shadow: 0px 20px 50px rgba(55, 69, 87, 0.1);
+  border-radius: 20px;
 }
