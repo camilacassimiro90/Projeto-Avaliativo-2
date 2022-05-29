@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListaService } from '../post.service';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 
 @Component({

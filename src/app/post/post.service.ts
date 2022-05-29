@@ -54,7 +54,6 @@ export class ListaService {
       catchError(this.errorHandler)
     )
   }
-     
    
   errorHandler(error:any) {
     let errorMessage = '';

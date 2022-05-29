@@ -5,8 +5,4 @@ export interface Lista {
   marca:string;
   modelo:string;
   ativo: boolean;
-  totalUnidades:number;
-  unidadesAtivas:number;
-  unidadesInativas:number;
-  mediaEnergia:number;
 }
