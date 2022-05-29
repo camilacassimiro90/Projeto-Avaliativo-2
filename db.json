@@ -1,12 +1,3 @@
 {
-  "posts": [
-    {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "b",
-      "ativo": false,
-      "id": 2
-    }
-  ]
+  "posts": []
 }
