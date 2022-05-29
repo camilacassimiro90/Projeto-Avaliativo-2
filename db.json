@@ -4,49 +4,9 @@
       "apelido": "",
       "local": "",
       "marca": "",
-      "modelo": "f",
+      "modelo": "b",
       "ativo": false,
-      "id": 5
-    },
-    {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "l",
-      "ativo": false,
-      "id": 7
-    },
-    {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "j",
-      "ativo": false,
-      "id": 8
-    },
-    {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "j",
-      "ativo": false,
-      "id": 9
-    },
-    {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "ç",
-      "ativo": false,
-      "id": 10
-    },
-    {
-      "apelido": "a",
-      "local": "aa",
-      "marca": "aa",
-      "modelo": "aaa",
-      "ativo": false,
-      "id": 11
+      "id": 2
     }
   ]
 }

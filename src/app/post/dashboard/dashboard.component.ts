@@ -9,8 +9,11 @@ import { Lista } from '../post';
 })
 export class DashboardComponent implements OnInit {
   listas: Lista[] = [];
+  Total?: number
+  Inativas?: number;
+  Ativas?: number;
+  Unidades?: Lista[] = [];
 
-  unidadeAtivo?: number;
 
   constructor(public postService: ListaService) { }
 
@@ -18,14 +21,17 @@ export class DashboardComponent implements OnInit {
     this.postService.pegarDados().subscribe((data: Lista[]) => {
       this.listas = data;
       console.log(this.listas);
+      this.showUnits();
     })
   }
 
-  // getAtivos(){
-  //   this.unidadeAtivo? = for (let i = 0; i < this.unidadeAtivo.length; i++) {
-  //     const element = this.unidadeAtivo[i];
-      
-  //   }
-  // }
+  showUnits() {
+    this.postService.pegarDados().subscribe(resposta => {
+      this.Unidades = resposta;
+      this.Ativas = this.Unidades.filter((Unidades: { ativo: boolean }) => Unidades.ativo === true).length;
+      this.Inativas = (this.Unidades.length - this.Ativas);
+      this.Total = this.Unidades.length;
 
+    });
+  }
 }
